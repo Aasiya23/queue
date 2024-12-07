@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 void display() 
 { 
 int i; 
@@ -13,4 +14,32 @@ printf("%d\n",cqueue[i]);
 printf("cqueue[%d]:",i); 
 printf("%d\n",cqueue[i]); 
 } 
+=======
+void insert(int item) 
+{ 
+if(f==-1) 
+f=0; 
+r=(r+1)%MAX; 
+cqueue[r]=item; 
+} 
+int delete() 
+{ 
+int element; 
+if(queueempty()) 
+{ 
+printf("circular queue is underflow\n");
+return -1;
+}
+else
+{
+element=cqueue[f];
+if(f==r)
+{
+f=-1;r=-1;
+}
+else
+f=(f+1)%MAX;
+return element;
+}
+>>>>>>> 18e4be761fba67e5ddd697c588c00df6b676a7cd
 }
